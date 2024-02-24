@@ -20,6 +20,7 @@ export const generate = async (
   }
 
   const sharp = require("sharp")(input) as Sharp;
+  // TODO allow custom blur
   const blurred = await sharp.blur(100).webp().toBuffer()
   return `data:image/webp;base64,${blurred.toString("base64")}`;
 };

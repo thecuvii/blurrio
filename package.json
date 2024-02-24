@@ -38,7 +38,8 @@
     "lint": "next lint",
     "prepublishOnly": "npx bunchee",
     "release": "npx bumpp && pnpm publish",
-    "start": "next start"
+    "start": "next start",
+    "test": "npx vitest"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.0.3",
