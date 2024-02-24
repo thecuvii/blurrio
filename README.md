@@ -4,10 +4,13 @@
 
 ## Usage
 
-```typescript
+```tsx
 import { generate } from 'blurrio'
 
+// runs in browser, returns a base64 string
 const blur = await generate(file, 180)
+
+<img src={blur}/>
 ```
 
 ## Credit

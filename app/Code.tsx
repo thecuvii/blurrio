@@ -6,10 +6,18 @@ export const Code = async () => {
     langs: ["typescript"],
   });
 
-  const code = highlighter.codeToHtml("import { generate } from 'blurrio'\n\nconst blur = await generate(file, 180)", {
-    lang: "typescript",
-    theme: "vitesse-light",
-  });
+  const code = highlighter.codeToHtml(
+    `import { generate } from 'blurrio'
+
+// runs in browser, returns a base64 string
+const blur = await generate(file, 180)
+
+<img src={blur}/>`,
+    {
+      lang: "typescript",
+      theme: "vitesse-light",
+    }
+  );
 
   return <div dangerouslySetInnerHTML={{__html:code}} />;
 };
