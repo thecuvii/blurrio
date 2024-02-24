@@ -13,6 +13,11 @@ const blur = await generate(file, 180)
 <img src={blur}/>
 ```
 
+## TODO 
+
+- [ ] Support more input formats.
+- [ ] Support nodejs via sharp.
+
 ## Credit
 
 This package is simply a tiny wrapper for [StackBlur.js](https://github.com/flozz/StackBlur).
