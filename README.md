@@ -9,3 +9,7 @@ import { generate } from 'blurrio'
 
 const blur = await generate(file, 180)
 ```
+
+## Credit
+
+This package is simply a tiny wrapper for [StackBlur.js](https://github.com/flozz/StackBlur).
