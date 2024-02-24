@@ -4,15 +4,12 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import prettyBytes from "pretty-bytes";
 
-import { Copy, Loader, Upload } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ReactCompareSlider } from "react-compare-slider";
-import Dropzone from "react-dropzone";
-import { Button } from "~/components/ui/button";
 import { Skeleton } from "~/components/ui/skeleton";
-import { generateImagePlaceholder } from "~/src/blur";
+import { generate } from "blurrio";
+
 
 export function Main() {
   const [file, setFile] = useState<File | null>(null);
@@ -32,7 +29,7 @@ export function Main() {
 
   const { data: blurDataURL, isLoading } = useQuery({
     queryKey: [previewDataURL, radius],
-    queryFn: () => generateImagePlaceholder(file!, radius),
+    queryFn: () => generate(file!, radius),
     enabled: !!previewDataURL && !!file,
   });
 
@@ -45,6 +42,7 @@ export function Main() {
       .then((blob) => new File([blob], "example.jpg"))
       .then(onFileSelected);
   }, [onFileSelected]);
+
 
   return (
     <main className="mx-4 mt-24">

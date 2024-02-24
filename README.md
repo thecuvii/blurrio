@@ -5,7 +5,7 @@
 ## Usage
 
 ```tsx
-import { generate } from 'blurrio'
+import { generate } from 'blurrio' // for browser
 
 // runs in browser, returns a base64 string
 const blur = await generate(file, 180)
@@ -16,7 +16,7 @@ const blur = await generate(file, 180)
 ## TODO 
 
 - [ ] Support more input formats.
-- [ ] Support nodejs via sharp.
+- [x] Support nodejs via sharp.
 
 ## Credit
 

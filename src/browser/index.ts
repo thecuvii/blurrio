@@ -1,7 +1,7 @@
 import * as StackBlur from "stackblur-canvas";
 
 // TODO accept other format
-export const generateImagePlaceholder = (image: File, radius = 180) =>
+export const generate = (image: File, radius = 180) =>
   new Promise<string>((resolve, reject) => {
     const $canvas = document.createElement("canvas");
     const $img = new Image();

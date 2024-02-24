@@ -12,19 +12,23 @@
   },
   "license": "MIT",
   "author": "Cuvii <xw5427@gmail.com>",
+  "sideEffects": false,
   "exports": {
-    "import": {
-      "types": "./dist/es/index.d.ts",
-      "default": "./dist/es/index.js"
+    ".": {
+      "types": "./dist/browser/index.d.ts",
+      "default": "./dist/browser/index.js"
     },
-    "require": {
-      "types": "./dist/cjs/index.d.cts",
-      "default": "./dist/cjs/index.cjs"
+    "./browser": {
+      "types": "./dist/browser/index.d.ts",
+      "default": "./dist/browser/index.js"
+    },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "default": "./dist/node/index.js"
     }
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/es/index.mjs",
-  "types": "./dist/cjs/index.d.ts",
+  "module": "./dist/browser/index.js",
+  "types": "./dist/browser/index.d.ts",
   "files": [
     "dist"
   ],
@@ -51,6 +55,7 @@
     "react-compare-slider": "^3.0.1",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
+    "sharp": "^0.33.2",
     "shiki": "^1.1.7",
     "stackblur-canvas": "^2.7.0",
     "tailwind-merge": "^2.2.1",
@@ -61,6 +66,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "blurrio": "./",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
