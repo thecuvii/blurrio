@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ReactCompareSlider } from "react-compare-slider";
 import { Skeleton } from "~/components/ui/skeleton";
-import { generate } from "blurrio";
+import { generate } from "~/src/browser";
 
 
 export function Main() {

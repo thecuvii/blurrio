@@ -76,9 +76,6 @@ devDependencies:
   autoprefixer:
     specifier: ^10.0.1
     version: 10.4.17(postcss@8.4.35)
-  blurrio:
-    specifier: ./
-    version: 'link:'
   eslint:
     specifier: ^8
     version: 8.57.0
