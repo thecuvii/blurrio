@@ -33,7 +33,7 @@
     "dev": "next dev & npx goloco -d blurrio -p 3000",
     "lint": "next lint",
     "prepublishOnly": "npx bunchee",
-    "release": "npx bumpp",
+    "release": "npx bumpp && pnpm publish",
     "start": "next start"
   },
   "dependencies": {
